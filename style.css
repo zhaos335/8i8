@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(199, 199, 182);
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 100vh;
+    width: 100%;
+    font-size: 0;
+    line-height: 0;
+}
+
+.horizontal-scroll-container {
+    display: flex;
+    height: 100vh;
+    width: max-content;
+    font-size: 0;
+    line-height: 0;
+    align-items: flex-end; 
+}
+
+.horizontal-scroll-container a {
+    display: block;
+    height: 100vh;
+    width: auto;
+    flex-shrink: 0;
+    vertical-align: bottom; 
+    line-height: 0;
+}
+
+.horizontal-scroll-container img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    object-position: center bottom; 
+    display: block;
+    vertical-align: bottom; 
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+.horizontal-scroll-container img:hover {
+    opacity: 0.9;
+}
+
