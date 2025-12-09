@@ -1,0 +1,88 @@
+/* style.css */
+body {
+    background-image: url('Images/2.avif');
+    background-size: cover;
+    background-position: center;
+    background-color: #55461b;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    color: #39501c;
+    font-family: 'Georgia', serif;
+}
+a{ color: #39501c;
+   text-decoration: none;
+font-family: "Cormorant Upright", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: hsla(37, 50%, 35%, 0.501);
+    border-radius: 10px;
+}
+
+h1 {font-family: "Cormorant Upright", serif;
+  font-weight: 400;
+  font-style: normal;
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 30px;
+    color: #eedeb0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-family: "Cormorant Upright", serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+.etymology {
+    background-color: rgba(49, 87, 112, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 30px 0;
+}
+
+video {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 40px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.home-link {
+    display: inline-block;
+    margin-top: -10px;
+    padding: 10px 2px;
+    color: rgb(78, 107, 45);
+    font-size: 15px;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    p {
+        font-size: 1.1em;
+    }
+}
