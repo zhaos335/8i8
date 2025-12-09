@@ -1,0 +1,99 @@
+body {
+   
+    background-color: beige;
+}
+
+#first-image {position: absolute;
+	top: 295px;
+	left: 320px;
+    width:600px;
+ }
+
+#second-image {position: relative;
+       top: 30px;
+       left: 30px;
+       width: 220px;
+ }
+
+
+#third-image {position: absolute;
+	top: 180px;
+	left: 295px;
+    width:600px;
+ }
+
+ #fourth-image {position: absolute;
+	top: 900px;
+	left: 350px;
+    width:400px;
+ }
+
+ #fifth-image {position: absolute;
+	top: 730px;
+	left: 800px;
+    width:400px;
+ }
+
+ #sixth-image {position: absolute;
+	top: 895px;
+	left: 900px;
+    width:400px;
+ }
+
+#seventh-image {position: absolute;
+	top: 480px;
+	left: 14px;
+    width:274px;
+ }
+
+ #eighth-image {position: absolute;
+	top: 20px;
+	left: 910px;
+    width:400px;
+ }
+
+ #ninth-image {position: absolute;
+	top: 330px;
+	left: 1000px;
+    width:400px;
+ }
+
+ #tenth-image {position: absolute;
+	top: 710px;
+	left: 10px;
+    width:600px;
+ }
+
+ a {font-size: 15px;
+	font-family: 'Courier New', Courier, monospace;
+    color: rgb(225, 201, 171);
+    position: absolute;
+    bottom: -420px; 
+    left: 1px; }
+
+@media (max-width: 580px) {
+    .gallery {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+    .image-container {
+        height: 400px;
+    }
+}
+
+@media (min-width: 581px) and (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .image-container {
+        height: 450px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .image-container {
+        height: 500px;
+    }
+}

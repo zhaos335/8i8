@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All you need to know about scissors</title>
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #8DB0C3;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+audio {
+  margin: 20px 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  font-family: "p22-typewriter", monospace;
+  font-size: 10px;
+  color: #B7D0D4;
+  margin-top: 5px;
+  text-align: center;
+}
+
+h1 {
+  font-family: monospace;
+  font-size: 25px;
+  font-weight: bold;
+  color: #C5E1EC;
+  text-align: center;
+  width: 100%;
+}
+
+h2 {
+  font-size: 20px;
+  font-family: Georgia, Times, Times New Roman, serif;
+  color: #C5E1EC;
+  text-align: center;
+  width: 100%;
+}
+
+
+.jar {
+  background-color: #8DB0C3;
+  width: 90%;
+  max-width: 800px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+p {
+  font-family: monospace;
+  font-size: 15px;
+  color: #B7D0D4;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+a {
+  font-size: 10px;
+  color: #88969B;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+
+
+.scissors {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 600px;
+  z-index: 1000;
+  offset-path: path("M 200 400 C 400 250, 700 100, 1000 -100");
+  offset-rotate: auto;
+  animation: moveAlongPath 3s ease-in forwards;
+  animation-fill-mode: forwards;
+}
+
+.scissors-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-origin: center center;
+  animation: scissorOpenClose 0.5s infinite ease-in-out alternate;
+}
+
+.blade {
+  position: absolute;
+  width: 100%;
+  transform-origin: 20% center;
+}
+
+.blade.top {
+  transform: rotate(15deg);
+}
+
+.blade.bottom {
+  transform: rotate(-15deg);
+}
+
+
+@keyframes moveAlongPath {
+  0% {
+    offset-distance: 0%;
+    opacity: 1;
+    transform: scale(1);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 120%;
+    opacity: 0;
+    transform: scale(0.7) translate(300px, -250px);
+    filter: blur(2px);
+  }
+}
+
+@keyframes scissorOpenClose {
+  0% { transform: rotate(180deg); }
+  100% { transform: rotate(188deg); }
+}
+
+svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.bigimage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.bigimage img {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+figure img {
+  max-width: 60%;
+  height: auto;
+}
+
+.titlepage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.titlepage img {
+  max-width: 100%;
+  height: auto;
+}
+
+a[href="../index.html"] {
+  margin: 30px auto;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-family: 'Courier New', Courier, monospace;
+  display: block;
+  text-align: center;
+  width: fit-content;
+}
+
+audio {
+  display: block;
+  margin: 20px auto;
+}
+
+.text-content {
+  text-align: center;
+  width: 100%;
+}
+
+.jar > * {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p br {
+  display: block;
+  content: "";
+  margin: -10px;
+}
+</style>
+</head>
+
+<body>
+  <div class="scissors">
+    <div class="scissors-inner">
+      <img src="Images/scissors1.png" class="blade top" alt="Scissors">
+    </div>
+  </div>
+
+  <svg viewBox="0 0 800 500">
+    <defs>
+      <mask id="cutMask">
+        <rect width="800" height="500" fill="white"/>
+        <path id="cutPath"
+          d="M 100 400 C 400 250, 700 100, 1000 -100"
+          fill="none"
+          stroke="white"
+          stroke-width="20"
+          stroke-linecap="round">
+          <animate attributeName="stroke-dasharray"
+                   from="0,1200"
+                   to="1200,0"
+                   dur="3s"
+                   fill="freeze"/>
+        </path>
+      </mask>
+    </defs>
+  </svg>
+
+
+  <div class="container">
+    <div class="jar">
+      <div class="bigimage">
+        <img src="images/1.gif" alt="Animated scissors">
+      </div>
+
+      <div class="titlepage">
+        <img src="images/6.jpg" alt="Title image">
+      </div>
+      
+      <div class="text-content">
+        <a href="https://pixabay.com/sound-effects/search/scissors%20cutting/">The Sound of Scissors</a>
+        <br><br>
+
+        <audio controls>
+          <source src="Images/4.mp3" type="audio/mpeg">
+          Your browser does not support the audio tag.
+        </audio>
+
+        <br>
+
+        <h2>Ode to scissors</h2>
+        <p>
+          Scissors, with a silver lining<br>
+          Travel along the sharp edge,<br>
+          it can seperate everything into half effortless<br>
+          If you treat it friendly,<br>
+          It will serve as a creative tool<br>
+          delicate Psaligrati and patterns come alive<br>
+          However, if you couldn't make friends with scissors<br>
+          it can also hurt us so deeply without a warning
+        </p>
+
+        <figure>
+          <img src="images/9.jpg" alt="Psaligrati art">
+          <figcaption>The word "Psaligrati" originates from Greek and literally means "painting/creating with scissors".</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/5.jpg" alt="Historical scissors">  
+          <figcaption>This art form originated in China with papermaking and spread worldwide via the Silk Road in the 14th century.</figcaption>
+        </figure>
+
+        <a href="../index.html">Homepage</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

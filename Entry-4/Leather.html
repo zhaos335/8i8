@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Type on the web</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- This is for Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+SAS:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/uwx2ykb.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #648EC0;
+            font-family: "p22-typewriter", Helvetica, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        a {
+            color: #B5ACA3;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 20px;
+            padding: 8px 16px;
+            transition: all 0.3s ease;
+        }
+
+
+        h1 {
+    font-family: "Playwrite DE SAS", sans-serif;
+    font-size: 120px;
+    text-align: center;
+    letter-spacing: -4px;
+    line-height: 1.2;
+    margin: 80px 0 40px 0;
+    color: #B0D2EC;
+    padding: 20px;
+}
+    
+
+        h1:hover {
+            color: #533A33;
+            font-family: serif;
+        }
+
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-bottom: 10px;
+        }
+
+        .content-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+img[src="images/5.png"] {
+    width: 200px; 
+    height: auto; 
+}
+
+.small-image {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+}
+     .image-text-group {
+    display: flex;
+    align-items: center;  
+    justify-content: center; 
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    height: 100%; 
+}
+
+
+.image-text-group img {
+    align-self: center; 
+}
+        .text-content {
+            flex: 1;
+        }
+
+        p {
+            font-size: 20px;
+            padding: 20px;
+            border: solid 4px #533A33;
+            background-color: beige;
+            text-align: justify;
+            margin: 20px 0;
+        }
+
+        #paragraph1 {
+            font-family: "p22-typewriter", Helvetica;
+            text-indent: 10px;
+        }
+
+        #paragraph1:hover {
+            background-color: lightsteelblue;
+        }
+
+        #paragraph2 {
+            font-family: "p22-typewriter", monospace;
+            text-indent: 10px;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        .highlights {
+            background-color: lightsteelblue;
+            font-style: oblique;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 2px 4px;
+        }
+
+        .blue {
+            background-color: lightsteelblue;
+            font-style: oblique;
+            font-weight: bold;
+            padding: 2px 4px;
+        }
+
+      
+        img {
+            max-width: 100%;
+            height: auto;
+            
+            display: block;
+        }
+
+     
+        .links-container {
+            text-align: center;
+            margin-top: -20px;
+            padding-top: 20px;
+        }
+
+       
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 60px;
+                letter-spacing: -2px;
+                line-height: 1.1;
+                margin: 20px 0;
+            }
+            
+            .image-text-group {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .image-text-group img {
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            
+            p {
+                font-size: 18px;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 40px;
+            }
+            
+            p {
+                font-size: 16px;
+            }
+            
+            a {
+                display: block;
+                margin: 1px auto;
+                text-align: center;
+                width: 200px;
+            }
+        }
+
+       
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #533A33;
+            margin-top: 40px;
+            margin-bottom: -100px;
+            padding-left: 10px;
+        }
+ .section-title7 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #533A33;
+            margin-top: -50px;
+            margin-bottom: -10px;
+            padding-left: 10px;
+        }
+
+    
+        blockquote {
+            font-style: italic;
+            color: #333;
+            border-left: 3px solid #B5ACA3;
+            padding-left: 20px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>All about <br> leather shoes</h1>
+    
+    <div class="container">
+        <div class="content-section">
+            <div class="section-title">A Walk Through the History of Shoes</div>
+            <div class="image-text-group">
+                <img src="images/9.jpg" alt="Ancient shoes illustration">
+                <div class="text-content">
+                    <p id="paragraph1">
+                        How far back in human history do shoes go? Anthropologists estimate that humans first began wearing some form of sturdy foot covering at least 40,000 years ago, based on <span class="highlights">changes in toe bones.</span> The oldest surviving pair of shoes is what's referred to as the Fort Rock sandals, woven sagebrush bark sandals made by Indigenous people in what's now southeast Oregon and northern Nevada about 10,200 to 9,300 years ago (according to radiocarbon dating). Similar variants of these sandals were made by the Klamath Tribes up <span class="highlights">until the 20th century.</span>
+                    </p>
+                    <p id="paragraph1">
+                        As for fully enclosed shoes, archaeologists made a surprising discovery during a 2010 dig in an Armenian cave: well-preserved shoes made from tanned cowhide that date back 5,500 years. In other words, <span class="highlights">the world's oldest leather shoes.</span> Aside from being made of a familiar modern material, the shoes were also laced along a center seam. Renowned designer Manolo Blahnik commented, "It is astonishing how much this shoe resembles a modern shoe!"
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title7">A story narrated by the shoes</div>
+            <div class="image-text-group">
+                <div class="text-content">
+                    <p id="paragraph2">
+                        "This pair of shoes is a gift he gave me.<br>
+                        <span class="blue">It is the most beautiful and expensive pair I have ever owned.</span><br>
+                        The exquisite leather and elegant curves,<br>
+                        seem to carry a period of days that shone just as brightly.<br>
+                        When I first wore them,<br>
+                        it felt as if I could touch the entire sky of London."
+                    </p>
+                </div>
+                <img src="images/5.png" class="small-image">
+            </div>
+        </div>
+    </div>
+
+    <div class="links-container">
+        <a href="https://www.101soundboards.com/boards/725214-leather-shoes-sfx-library#google_vignette">The view from a leather shoe</a>
+        <a href="../index.html">Homepage</a>
+    </div>
+
+</body>
+</html>
