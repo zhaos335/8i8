@@ -1,0 +1,172 @@
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #2b251b;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        
+        .clock-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            width: 100%;
+            margin: 30px auto;
+            padding: 20px;
+            justify-items: center;
+        }
+
+     
+        .clock {
+            cursor: pointer;
+            position: relative;
+            width: 220px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+        }
+
+        .clock img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+            transition: filter 0.3s ease;
+        }
+
+        .clock:hover {
+            transform: scale(1.08);
+            z-index: 10;
+        }
+
+        .clock:hover img {
+            filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5));
+        }
+
+        #NewYork {
+            text-align: center;
+            color: antiquewhite;
+            font-family: "Rye", serif;
+            font-weight: 400;
+            font-size: 18px;
+            margin-top: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 2;
+        }
+
+        .time-box {
+            position: absolute;
+            top: -50px; 
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 15px;
+            color: antiquewhite;
+            font-size: 16px;
+            font-family: "Rye", serif;
+            display: none;
+            min-width: 120px;
+            text-align: center;
+            z-index: 100;
+            white-space: nowrap;
+        }
+
+        
+
+        .clock:hover .time-box {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+            to { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+
+    
+        .homepage-link {
+            font-size: 14px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #8d8c5c;
+            margin-top: 20px;
+            padding: 12px;
+            position: relative;
+            z-index: 10;
+        }
+
+
+
+       
+        .page-title {
+            color: antiquewhite;
+            font-family: "Rye", serif;
+            font-size: 42px;
+            text-align: center;
+            margin: 20px 0 40px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            letter-spacing: 1px;
+        }
+
+       
+        @media (max-width: 768px) {
+            .clock-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+            
+            .page-title {
+                font-size: 32px;
+            }
+            
+            .clock img {
+                width: 160px;
+                height: 160px;
+            }
+            
+            .clock {
+                width: 180px;
+            }
+            
+            .time-box {
+                font-size: 14px;
+                min-width: 100px;
+                top: -50px;
+                padding: 8px 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .clock-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .page-title {
+                font-size: 28px;
+            }
+            
+            .clock img {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .clock {
+                width: 200px;
+            }
+        }
+
+       
+       
